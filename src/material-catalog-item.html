@@ -9,24 +9,29 @@
       transition: all .3s ease;
     }
 
-    :host:hover{
-      -webkit-transform: scale(1.1);
-    }
-
-    :host:hover img{
+    :host:hover img {
       -webkit-transform: scale(1.1) translate(0, -5%) !important;
     }
 
-    img{
+    img {
       transition: all .3s ease;
     }
 
-    .card{
+    .card {
       width: 300px;
     }
 
-    .card-title{
-      color: #000 !important;
+    .card.small {
+      height: 400px;
+    }
+
+    .card.small .card-image {
+      height: 250px;
+    }
+
+    .card .card-image .card-title {
+      width: 100%;
+      background-color: rgba(0, 0, 0, .7);
     }
   </style>
 
