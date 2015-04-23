@@ -1,20 +1,27 @@
-<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="/bower_components/polymer/polymer.html">
 
 <dom-module id="material-catalog-item">
     <template>
-      <img class$="{{namespace}}" src="{{photo}}">
-      <span class$="{{namespace}}">{{price}}</span>
+      <header>
+        <img src="{{photo}}">
+        <h1>{{name}}</h1>
+      </header>
+
+      <div>
+        <span>{{price}}</span>
+      </div>
+
       <content />
     </template>
 </dom-module>
 
 <script>
-    Polymer({
-        is: 'material-catalog-item',
-        properties: {
-            photo: String,
-            price: Number,
-            namespace: String
-        }
-    });
+  Polymer({
+    is: 'material-catalog-item',
+    properties: {
+      name: String,
+      photo: String,
+      price: Number
+    }
+  });
 </script>
